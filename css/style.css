@@ -1,0 +1,28 @@
+/* Selector {
+  property: value;
+} */
+
+body {
+  background-image: url(backgroundimage.webp);
+  background-size: cover;
+  cursor: help;
+}
+
+h2 {
+  color: red;
+  text-align: center;
+  border: 5px solid purple;
+}
+
+p {
+  color: pink;
+}
+
+p {
+  color: green;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
