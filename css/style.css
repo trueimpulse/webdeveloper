@@ -2,27 +2,51 @@
   property: value;
 } */
 
+* {
+  text-align: right;
+}
+
 body {
   background-image: url(backgroundimage.webp);
   background-size: cover;
   cursor: help;
 }
 
-h2 {
+h2,
+p {
   color: red;
   text-align: center;
   border: 5px solid purple;
 }
 
 p {
-  color: pink;
-}
+  line-height: 20px;
 
-p {
-  color: green;
+  color: pink;
+  font-style: italic;
+  font-family: "Inconsolata", monospace;
+}
+img {
+  float: left;
 }
 
 li {
   list-style: none;
   display: inline-block;
+}
+
+.webtext {
+  border: 5px dashed green;
+}
+
+.active {
+  color: red;
+}
+
+#div1 {
+  background: rgba(0, 0, 255, 0.2);
+}
+
+#div2 {
+  background: rgba(255, 0, 0, 0.2);
 }
