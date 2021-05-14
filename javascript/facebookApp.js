@@ -6,12 +6,20 @@
 
 // 3. Create an array called "newsfeed" which contains 3 objects with properties "username" and "timeline".
 
-const person = {
-  username: "Brand New User",
-  password: "test123",
-};
-
-const database = [person];
+const database = [
+  {
+    username: "Sally",
+    password: "123",
+  },
+  {
+    username: "Brandon",
+    password: "test",
+  },
+  {
+    username: "Brad",
+    password: "test123",
+  },
+];
 
 const newsfeed = [
   { username: "First Username", timeline: "Getting started" },
@@ -19,15 +27,31 @@ const newsfeed = [
   { username: "Third Username", timeline: "Finishline" },
 ];
 
-let userNamePrompt = prompt("What's your username?");
-let passwordPrompt = prompt("What's your password?");
+function isUserValid(userName, passWord) {
+  for (let i = 0; i < database.length; i++) {
+    if (
+      database[i].username === userName &&
+      database[i].password === passWord
+    ) {
+      return true;
+    }
+  }
+  // if (user === person.username && pass === person.password) {
+  //   console.log(newsfeed);
+  // } else {
+  //   alert("Sorry, wrong login");
+  // }
+  return false;
+}
 
-function signIn(user, pass) {
-  if (user === person.username && pass === person.password) {
+function signIn(userName, passWord) {
+  if (isUserValid(userName, passWord)) {
     console.log(newsfeed);
   } else {
-    alert("Sorry, wrong login");
+    alert("Sorry, wrong username and password");
   }
 }
 
+let userNamePrompt = prompt("What's your username?");
+let passwordPrompt = prompt("What's your password?");
 signIn(userNamePrompt, passwordPrompt);
